@@ -28,6 +28,7 @@ class AppCoordinator: Coordinator {
     {
         let vc = ViewController.instantiate()
         vc.coordinator = self
+        vc.dataStore = AppDataStore.shared
         navigationController.pushViewController(vc, animated: true)
     }
     
@@ -42,6 +43,7 @@ class AppCoordinator: Coordinator {
     {
         let vc = RSSFeedItemContentViewController.instantiate()
         vc.rssFeedItem = rssFeedItem
+        vc.dataStore = AppDataStore.shared
         navigationController.pushViewController(vc, animated: true)
     }
 }

@@ -13,7 +13,7 @@
 		2E4A782B258587B300154298 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4A782A258587B300154298 /* TabBarController.swift */; };
 		2E4A783025858C3D00154298 /* DateAndTime.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2E4A782F25858C3D00154298 /* DateAndTime.xib */; };
 		2E4A783325858E1D00154298 /* DateAndTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4A783225858E1D00154298 /* DateAndTime.swift */; };
-		2E4A783C2586047600154298 /* RSSFeedHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4A783B2586047600154298 /* RSSFeedHelper.swift */; };
+		2E53CB63258653F60080DE0C /* AppDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53CB62258653F60080DE0C /* AppDataStore.swift */; };
 		2EDEFAC425854BA400F916D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEFAC325854BA400F916D4 /* AppDelegate.swift */; };
 		2EDEFAC625854BA400F916D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEFAC525854BA400F916D4 /* SceneDelegate.swift */; };
 		2EDEFAC825854BA400F916D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDEFAC725854BA400F916D4 /* ViewController.swift */; };
@@ -39,7 +39,7 @@
 		2E4A782A258587B300154298 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		2E4A782F25858C3D00154298 /* DateAndTime.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DateAndTime.xib; sourceTree = "<group>"; };
 		2E4A783225858E1D00154298 /* DateAndTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateAndTime.swift; sourceTree = "<group>"; };
-		2E4A783B2586047600154298 /* RSSFeedHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSFeedHelper.swift; sourceTree = "<group>"; };
+		2E53CB62258653F60080DE0C /* AppDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataStore.swift; sourceTree = "<group>"; };
 		2EDEFAC025854BA400F916D4 /* RSSFeedApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSFeedApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDEFAC325854BA400F916D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EDEFAC525854BA400F916D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +81,14 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		2E53CB662586546F0080DE0C /* Data Store */ = {
+			isa = PBXGroup;
+			children = (
+				2E53CB62258653F60080DE0C /* AppDataStore.swift */,
+			);
+			path = "Data Store";
+			sourceTree = "<group>";
+		};
 		2EDEFAB725854BA400F916D4 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +110,7 @@
 		2EDEFAC225854BA400F916D4 /* RSSFeedApp */ = {
 			isa = PBXGroup;
 			children = (
+				2E53CB662586546F0080DE0C /* Data Store */,
 				2E4A781E2585819A00154298 /* Coordinator */,
 				2EDEFAF82585676E00F916D4 /* RSS */,
 				2EDEFAEC2585544B00F916D4 /* Views */,
@@ -146,7 +155,6 @@
 			children = (
 				2EDEFAF92585679C00F916D4 /* RSSFeedDataSource.swift */,
 				2EDEFAFD258567ED00F916D4 /* RSSFeedFethcer.swift */,
-				2E4A783B2586047600154298 /* RSSFeedHelper.swift */,
 			);
 			path = RSS;
 			sourceTree = "<group>";
@@ -286,6 +294,7 @@
 			files = (
 				2E4A783325858E1D00154298 /* DateAndTime.swift in Sources */,
 				2EDEFAC825854BA400F916D4 /* ViewController.swift in Sources */,
+				2E53CB63258653F60080DE0C /* AppDataStore.swift in Sources */,
 				2EDEFADE2585500B00F916D4 /* RSSFeedViewController.swift in Sources */,
 				2E4A78242585822F00154298 /* AppCoordinator.swift in Sources */,
 				2EDEFAFA2585679C00F916D4 /* RSSFeedDataSource.swift in Sources */,
@@ -294,7 +303,6 @@
 				2E4A781C2585804400154298 /* RSSFeedItemContentViewController.swift in Sources */,
 				2EDEFAE52585514900F916D4 /* CNNWorldSportAndEntertainmentRSSFeedViewController.swift in Sources */,
 				2EDEFAEE2585547500F916D4 /* RSSFeedTableViewCell.swift in Sources */,
-				2E4A783C2586047600154298 /* RSSFeedHelper.swift in Sources */,
 				2EDEFAFE258567ED00F916D4 /* RSSFeedFethcer.swift in Sources */,
 				2EDEFAC425854BA400F916D4 /* AppDelegate.swift in Sources */,
 				2E4A782B258587B300154298 /* TabBarController.swift in Sources */,

@@ -13,6 +13,7 @@ class ViewController: UIViewController, Storyboarded
     @IBOutlet weak var dateAndTime: DateAndTime!
     
     var coordinator: Coordinator?
+    var dataStore: AppDataStoreProtocol?
     
     override func viewDidLoad()
     {
@@ -34,7 +35,7 @@ class ViewController: UIViewController, Storyboarded
     
     @IBAction func lastRssFeedItemPressed(_ sender: UITapGestureRecognizer)
     {
-        guard let lastRssFeedItem = RSSFeedHelper.lastRSSFeedItem else {
+        guard let dataStore = self.dataStore, let lastRssFeedItem = dataStore[DataStoreKeys.lastRssFeedItem.rawValue] as? RSSFeedItem else {
             return
         }
         
@@ -46,7 +47,7 @@ extension ViewController
 {
     private func layoutLastRssFeedItemData()
     {
-        guard let lastRssFeedItem = RSSFeedHelper.lastRSSFeedItem else {
+        guard let dataStore = self.dataStore, let lastRssFeedItem = dataStore[DataStoreKeys.lastRssFeedItem.rawValue] as? RSSFeedItem else {
             return
         }
         

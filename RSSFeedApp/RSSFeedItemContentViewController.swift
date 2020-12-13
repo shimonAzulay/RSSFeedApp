@@ -13,6 +13,7 @@ class RSSFeedItemContentViewController: UIViewController, Storyboarded
     @IBOutlet weak private var webView: WKWebView!
     
     var rssFeedItem: RSSFeedItem?
+    var dataStore: AppDataStoreProtocol?
 
     override func viewDidLoad()
     {
@@ -37,11 +38,11 @@ extension RSSFeedItemContentViewController
 {
     private func loadURL()
     {
-        guard let rssFeedItem = self.rssFeedItem else {
+        guard let rssFeedItem = self.rssFeedItem, var dataStore = self.dataStore else {
             return
         }
         
-        RSSFeedHelper.lastRSSFeedItem = rssFeedItem
+        dataStore[DataStoreKeys.lastRssFeedItem.rawValue] = rssFeedItem
         
         self.webView.load(URLRequest(url: rssFeedItem.rssFeedUrl))
     }
