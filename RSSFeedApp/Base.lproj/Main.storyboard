@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="RSSFeedApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wdV-OF-NXl">
+                                <rect key="frame" x="0.0" y="54" width="414" height="644"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDT-aV-Hmv">
+                                        <rect key="frame" x="5" y="0.0" width="404" height="99"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shimon Azulay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sOV-uk-heG">
+                                        <rect key="frame" x="5" y="109" width="404" height="99"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clock" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCl-44-Bh7">
+                                        <rect key="frame" x="5" y="218" width="404" height="99"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V8N-lK-GAO" customClass="DateAndTime" customModule="RSSFeedApp" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="327" width="404" height="99"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last RSS Feed Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VrB-5J-d04">
+                                        <rect key="frame" x="5" y="436" width="404" height="99"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N/A" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s6G-Ud-Jmt">
+                                        <rect key="frame" x="5" y="545" width="404" height="99"/>
+                                        <gestureRecognizers/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="3te-zV-9Aj" appends="YES" id="giA-JU-Div"/>
+                                        </connections>
+                                    </label>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="0.0" left="5" bottom="0.0" right="5"/>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iLH-Tf-dLy">
+                                <rect key="frame" x="154.5" y="789" width="105" height="30"/>
+                                <state key="normal" title="CNN RSS FEED"/>
+                                <connections>
+                                    <action selector="rssFeedButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="deo-dW-a3r"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wdV-OF-NXl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3wo-qJ-d5M"/>
+                            <constraint firstItem="iLH-Tf-dLy" firstAttribute="top" relation="greaterThanOrEqual" secondItem="wdV-OF-NXl" secondAttribute="bottom" constant="84" id="Jks-ON-oK0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iLH-Tf-dLy" secondAttribute="bottom" constant="43" id="Shu-Ue-pW4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wdV-OF-NXl" secondAttribute="trailing" id="tec-lL-wjn"/>
+                            <constraint firstItem="wdV-OF-NXl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ucX-I6-WEe"/>
+                            <constraint firstItem="iLH-Tf-dLy" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ue9-X2-2iJ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="dateAndTime" destination="V8N-lK-GAO" id="TzU-mf-m65"/>
+                        <outlet property="lastRssFeedItem" destination="s6G-Ud-Jmt" id="iqg-5b-FDY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="3te-zV-9Aj">
+                    <connections>
+                        <action selector="lastRssFeedItemPressed:" destination="BYZ-38-t0r" id="Qqi-5G-ucV"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-686.95652173913049" y="57.589285714285708"/>
+        </scene>
+        <!--Feed Item Content View Controller-->
+        <scene sceneID="LtS-gN-O96">
+            <objects>
+                <viewController storyboardIdentifier="RSSFeedItemContentViewController" id="5iK-pb-Ru3" customClass="RSSFeedItemContentViewController" customModule="RSSFeedApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p6J-9t-rjf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vW1-zz-Rph">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4fT-Xn-4bK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vW1-zz-Rph" firstAttribute="top" secondItem="4fT-Xn-4bK" secondAttribute="top" id="83T-Lf-20R"/>
+                            <constraint firstItem="vW1-zz-Rph" firstAttribute="bottom" secondItem="4fT-Xn-4bK" secondAttribute="bottom" constant="34" id="C1P-Vy-A7E"/>
+                            <constraint firstItem="4fT-Xn-4bK" firstAttribute="trailing" secondItem="vW1-zz-Rph" secondAttribute="trailing" id="FSo-d9-yik"/>
+                            <constraint firstItem="vW1-zz-Rph" firstAttribute="leading" secondItem="4fT-Xn-4bK" secondAttribute="leading" id="sJe-Ku-oja"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="vW1-zz-Rph" id="bMx-ms-PJZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S1X-oE-Tqw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="374" y="771"/>
+        </scene>
+        <!--World Sport And Entertainment-->
+        <scene sceneID="5Df-VG-HHQ">
+            <objects>
+                <viewController id="odk-9N-Vqe" customClass="CNNWorldSportAndEntertainmentRSSFeedViewController" customModule="RSSFeedApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zAo-4l-KUJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Mkj-MM-zhF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="World Sport And Entertainment" id="DHI-fS-y7i"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Mp-TT-1ka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1657.9710144927537" y="505.58035714285711"/>
+        </scene>
+        <!--Travel-->
+        <scene sceneID="Voa-KX-mQo">
+            <objects>
+                <viewController id="wlR-Nc-8Ua" customClass="CNNTravelRSSFeedViewController" customModule="RSSFeedApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SZy-kJ-0Qk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0ud-bB-Y3l"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Travel" id="qmU-Jc-leI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BBq-pg-9Uc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1657.9710144927537" y="-174.10714285714286"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="S30-aW-BNv">
+            <objects>
+                <tabBarController storyboardIdentifier="TabBarController" id="gij-tu-fOq" customClass="TabBarController" customModule="RSSFeedApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5np-ui-wZu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="wlR-Nc-8Ua" kind="relationship" relationship="viewControllers" id="hpo-ia-34C"/>
+                        <segue destination="odk-9N-Vqe" kind="relationship" relationship="viewControllers" id="5Vd-QC-n2D"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wdd-DH-zLH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="428" y="58"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
