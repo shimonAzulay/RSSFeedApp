@@ -13,6 +13,7 @@ class RSSFeedViewController: UIViewController
     weak private var fetchingIndicator: UIActivityIndicatorView?
     
     var appCoordinator: Coordinator?
+    var rssFeedDataSource: RSSFeedDataSourceProtocol?
     
     var rssFeedItems: [[RSSFeedItem]] = [] {
         didSet
@@ -28,6 +29,16 @@ class RSSFeedViewController: UIViewController
         self.createRssFeedTableView()
         self.registerRssFeedTableViewCells()
         self.configureRssFeedTableView()
+        
+        self.rssFeedDataSource?.rssFeedObserver = { [weak self] items in
+            self?.rssFeedItems = items
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool)
+    {
+        super.viewWillDisappear(animated)
+        self.rssFeedDataSource?.stopFetching()
     }
 }
 

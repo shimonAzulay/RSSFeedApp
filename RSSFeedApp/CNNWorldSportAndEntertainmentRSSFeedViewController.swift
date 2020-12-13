@@ -8,17 +8,12 @@
 import UIKit
 
 class CNNWorldSportAndEntertainmentRSSFeedViewController: RSSFeedViewController
-{
-    override func viewDidLoad()
+{    
+    override func viewWillAppear(_ animated: Bool)
     {
-        super.viewDidLoad()
+        super.viewWillAppear(animated)
         
-        let rssFeedDataSource = RSSFeedDataSource(rssFeedFetcher: RSSFeedFethcer())
-        rssFeedDataSource.rssFeedObserver = { [weak self] items in
-            self?.rssFeedItems = items
-        }
-        
-        rssFeedDataSource.startFetch(from: [URL(string: "http://rss.cnn.com/rss/edition_sport.rss")!,
+        self.rssFeedDataSource?.startFetch(from: [URL(string: "http://rss.cnn.com/rss/edition_sport.rss")!,
                                             URL(string: "http://rss.cnn.com/rss/edition_entertainment.rss")!])
     }
 }

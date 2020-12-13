@@ -20,11 +20,13 @@ class TabBarController: UITabBarController, Storyboarded
             if let rssFeedViewController = viewController as? RSSFeedViewController
             {
                 rssFeedViewController.appCoordinator = self.coordinator
+                rssFeedViewController.rssFeedDataSource = RSSFeedDataSource(rssFeedFetcher: RSSFeedFethcer())
             }
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool)
+    {
         super.viewWillAppear(animated)
         
         self.navigationItem.title = "CNN RSS Feed"

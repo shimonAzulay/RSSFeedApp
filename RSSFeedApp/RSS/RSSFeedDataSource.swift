@@ -15,7 +15,7 @@ protocol RSSFeedDataSourceProtocol
     func stopFetching()
 }
 
-class RSSFeedDataSource
+class RSSFeedDataSource: RSSFeedDataSourceProtocol
 {
     private var rssFeedSourceUrls: [URL]?
     private var rssFeedFetcher: RSSFeedFethcerProtocol
